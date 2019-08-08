@@ -53,3 +53,7 @@ console.log(obj1.a.b.c); // Uncaught TypeError: Cannot read property 'c' of unde
 console.log(secureGet(obj2, 'a.b.c'));  // undefined 
 console.log(obj2.a.b.c); // Uncaught TypeError: Cannot read property 'b' of undefined
 ```
+
+# Advantages & disadvantages
++ secureGet的优点：正如上面介绍，它是简化了我们的安全检查
++ secureGet的缺点：字符串传入的属性，难以测试检查，不利于排查错误，这使得它显得鸡肋
