@@ -30,6 +30,11 @@ SecureGet正是用于解决这个问题
 
 # Usage
 ```
+npm i secure-getter
+```
+
+```
+const secureGet = require('secure-getter')
 const obj = {
     a: {
         b: {
