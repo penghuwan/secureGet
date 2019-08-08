@@ -54,6 +54,9 @@ console.log(secureGet(obj2, 'a.b.c'));  // undefined
 console.log(obj2.a.b.c); // Uncaught TypeError: Cannot read property 'b' of undefined
 ```
 
-# Advantages & disadvantages
+# Advantages & Disadvantages
 + secureGet的优点：正如上面介绍，它是简化了我们的安全检查
 + secureGet的缺点：字符串传入的属性，难以测试检查，不利于排查错误，这使得它显得鸡肋
+
+# Other
++ 我曾思考，传入的属性路径参数的格式是否要为一个数组，即['a','b','c'],但我发现实际上单引号的数量增加了编写代码的难度，于是放弃了，选择传入字符串，并用'·'标识符分割
